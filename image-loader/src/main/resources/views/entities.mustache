@@ -1,0 +1,58 @@
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>Hydra Entidades</title>
+<style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 64%;
+    }
+
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+</style>
+</head>
+<body>
+<h2 align="center">Entidades actualmente en Hydra</h2>
+<table align="center">
+<tr>
+    <th>Nobre</th>
+    <th>Tipo</th>
+</tr>
+	{{#repeated}}
+	<tr>
+		<td>{{name}}</td>
+		<td>{{type}}</td>
+	</tr>
+	{{/repeated}}
+</table>
+<br>
+<h2 align="center">Entidades nuevas en Hydra</h2>
+<table align="center">
+<tr>
+    <th>Nobre</th>
+    <th>Tipo</th>
+</tr>
+	{{#notRepeated}}
+	<tr>
+		<td>{{name}}</td>
+		<td>{{type}}</td>
+	</tr>
+	{{/notRepeated}}
+</table>
+<p>
+Todas estas entidades, tanto las nuevas como las ya encontradas, seran procesadas en nuestra base de datos de <br>
+conocimineto y seran validadas por la inteligencia para ser agregadas.
+</p>
+<br>
+<p> Muchas Gracias </p>
+</body>
+</html>

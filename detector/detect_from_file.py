@@ -77,7 +77,4 @@ while True:
         cv2.rectangle(img, (x, y), (x + w, y + h), (0, 255, 0), 1)
 
     cv2.imwrite("../image-loader/src/main/resources/assets/1" + img_path, img)
-    print("finish :)")
-    # cv2.imshow("Frame", img)
-    # cv2.waitKey(0)
-    # cv2.destroyAllWindows()
+    print("Finish :)")

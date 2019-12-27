@@ -1,0 +1,15 @@
+Luis Alfonso Hoyos Aristizábal	PER
+Luis Alfonso Hoyos	PER
+Sena	LOC
+Gina Parody	PER
+Óscar Iván Zuluaga	PER
+Chuzaman Andrés Fernando Sepúlveda	PER
+Embajada de Colombia	LOC
+OEA	ORG
+Camilo Ospina	PER
+Caldas	LOC
+Hoyos	LOC
+Universidad del Rosario	ORG
+Universidad de los Andes	ORG
+Ciencia Política	ORG
+La Sorbona	LOC

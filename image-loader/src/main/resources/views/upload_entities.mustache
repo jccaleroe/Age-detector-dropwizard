@@ -1,0 +1,45 @@
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>Hydra Entidades</title>
+<style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 64%;
+    }
+
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+</style>
+</head>
+<body>
+<h1>Desambiguacion de entidades con Hydra</h1>
+<form action="/client/uploadEntities" method="post" id="usrform">
+    <textarea rows="12" cols="120" name="text" id="text" form="usrform"></textarea>
+    <br>
+    <input type="submit" value="Subir"/>
+</form>
+<h2 align="center">Entidades actualmente en Hydra</h2>
+
+<table align="center">
+<tr>
+    <th>Nobre</th>
+    <th>Tipo</th>
+</tr>
+	{{#entities}}
+	<tr>
+		<td>{{name}}</td>
+		<td>{{type}}</td>
+	</tr>
+	{{/entities}}
+</table>
+</body>
+</html>

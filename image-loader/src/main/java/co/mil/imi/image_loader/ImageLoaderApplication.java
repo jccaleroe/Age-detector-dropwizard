@@ -1,6 +1,7 @@
 package co.mil.imi.image_loader;
 
 import co.mil.imi.image_loader.resources.ClientResource;
+import co.mil.imi.image_loader.resources.EntitiesResource;
 import co.mil.imi.image_loader.resources.FileResource;
 import io.dropwizard.Application;
 import io.dropwizard.bundles.assets.ConfiguredAssetsBundle;
@@ -46,5 +47,6 @@ public class ImageLoaderApplication extends Application<ImageLoaderConfiguration
         environment.jersey().register(MultiPartFeature.class);
         environment.jersey().register(FileResource.class);
         environment.jersey().register(ClientResource.class);
+        environment.jersey().register(EntitiesResource.class);
     }
 }

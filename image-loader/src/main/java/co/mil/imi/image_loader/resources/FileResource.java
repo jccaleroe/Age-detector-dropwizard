@@ -6,6 +6,7 @@ import org.glassfish.jersey.media.multipart.FormDataContentDisposition;
 import org.glassfish.jersey.media.multipart.FormDataParam;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import pool.AgeServerConnectionPool;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.POST;
@@ -28,9 +29,9 @@ public class FileResource {
         String uploadedFileLocation = "src/main/resources/assets/" + fileDetail.getFileName();
         LOGGER.info(uploadedFileLocation);
         writeToFile(uploadedInputStream, uploadedFileLocation);
-        ModelServer server = new ModelServer();
-        server.loadModel();
+        ModelServer server = AgeServerConnectionPool.getInstance().getClient();
         server.sendTask(fileDetail.getFileName());
+        AgeServerConnectionPool.getInstance().returnClient(server);
         return new ImageView("1" + fileDetail.getFileName());
     }
 
