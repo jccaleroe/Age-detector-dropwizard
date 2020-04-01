@@ -4,6 +4,7 @@ import co.mil.imi.models.flowable.HydraUpload;
 import co.mil.imi.models.resources.ClientResource;
 import co.mil.imi.models.resources.EntitiesResource;
 import co.mil.imi.models.resources.FileResource;
+import co.mil.imi.models.resources.UploadResource;
 import io.dropwizard.Application;
 import io.dropwizard.bundles.assets.ConfiguredAssetsBundle;
 import io.dropwizard.setup.Bootstrap;
@@ -49,6 +50,7 @@ public class ImageLoaderApplication extends Application<ImageLoaderConfiguration
         environment.jersey().register(FileResource.class);
         environment.jersey().register(ClientResource.class);
         environment.jersey().register(EntitiesResource.class);
-//        HydraUpload.go();
+        HydraUpload.go();
+        environment.jersey().register(UploadResource.class);
     }
 }
