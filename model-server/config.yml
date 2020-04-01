@@ -1,0 +1,15 @@
+logging:
+  level: INFO
+  loggers:
+    co.mil.imi.models: INFO
+
+server:
+  applicationConnectors:
+    - type: http
+      port: 8080
+
+assets:
+  overrides:
+    # Override requests to /dashboard/${1} to instead look in
+    # ${working directory}/src/main/resources/assets/${1}
+    /images: src/main/resources/assets/

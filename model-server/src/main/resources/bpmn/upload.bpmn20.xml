@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:flowable="http://flowable.org/bpmn"
+             targetNamespace="http://www.flowable.org/processdef">
+
+    <process id="upload" name="upload" isExecutable="true">
+        <startEvent id="startEvent"/>
+        <sequenceFlow sourceRef="startEvent" targetRef="Activity_05sn9ym"/>
+
+        <serviceTask id="Activity_05sn9ym" name="Seleccion auditor con mayor jerarquia"
+                     flowable:class="co.mil.imi.models.flowable.SelectAuditorDelegate"/>
+        <sequenceFlow sourceRef="Activity_05sn9ym" targetRef="Activity_0aq3p4a"/>
+
+        <userTask id="Activity_0aq3p4a" name="Autorizacion de la informacion"
+                  flowable:candidateGroups="auditors"/>
+        <sequenceFlow sourceRef="Activity_0aq3p4a" targetRef="Gateway_0350jt3"/>
+
+        <exclusiveGateway id="Gateway_0350jt3"/>
+        <sequenceFlow sourceRef="Gateway_0350jt3" targetRef="Activity_0r2o0m8">
+            <conditionExpression xsi:type="tFormalExpression">
+                <![CDATA[
+          ${approved}
+        ]]>
+            </conditionExpression>
+        </sequenceFlow>
+        <sequenceFlow sourceRef="Gateway_0350jt3" targetRef="Activity_0wbk6ej">
+            <conditionExpression xsi:type="tFormalExpression">
+                <![CDATA[
+          ${!approved}
+        ]]>
+            </conditionExpression>
+        </sequenceFlow>
+
+        <userTask id="Activity_0r2o0m8" name="Evaluacion de la fuente de informacion"
+                  flowable:candidateGroups="auditors"/>
+        <sequenceFlow sourceRef="Activity_0r2o0m8" targetRef="Activity_0n67j5z"/>
+
+        <userTask id="Activity_0n67j5z" name="Evaluacion de la informacion" flowable:candidateGroups="auditors"/>
+        <sequenceFlow sourceRef="Activity_0n67j5z" targetRef="Activity_0qeqw6k"/>
+
+        <userTask id="Activity_0qeqw6k" name="Asignar etiqueta segun fenomeno social"
+                  flowable:candidateGroups="auditors"/>
+        <sequenceFlow sourceRef="Activity_0qeqw6k" targetRef="Activity_0dxz98l"/>
+
+        <userTask id="Activity_0dxz98l" name="Definir quien tiene acceso" flowable:candidateGroups="auditors"/>
+        <sequenceFlow sourceRef="Activity_0dxz98l" targetRef="Event_17htkge"/>
+
+        <endEvent id="Event_17htkge"/>
+
+        <userTask id="Activity_0wbk6ej" name="Emitir concepto de mejora de cargue"
+                  flowable:candidateGroups="auditors"/>
+        <sequenceFlow sourceRef="Activity_0dxz98l" targetRef="reject_end"/>
+
+        <endEvent id="reject_end"/>
+    </process>
+</definitions>
