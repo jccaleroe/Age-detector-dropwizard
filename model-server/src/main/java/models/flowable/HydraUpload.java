@@ -1,4 +1,4 @@
-package co.mil.imi.models.flowable;
+package models.flowable;
 
 import org.flowable.engine.ProcessEngine;
 import org.flowable.engine.ProcessEngineConfiguration;

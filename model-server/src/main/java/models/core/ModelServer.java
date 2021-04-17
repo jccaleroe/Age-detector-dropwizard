@@ -1,4 +1,4 @@
-package co.mil.imi.models.core;
+package models.core;
 
 import java.io.*;
 import java.util.ArrayList;

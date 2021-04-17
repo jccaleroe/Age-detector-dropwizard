@@ -1,6 +1,6 @@
-package co.mil.imi.models.views;
+package models.views;
 
-import co.mil.imi.models.api.Entity;
+import models.api.Entity;
 import io.dropwizard.views.View;
 
 import java.util.ArrayList;

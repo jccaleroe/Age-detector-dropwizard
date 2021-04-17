@@ -1,6 +1,6 @@
-package co.mil.imi.models.resources;
+package models.resources;
 
-import co.mil.imi.models.views.FileView;
+import models.views.FileView;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;

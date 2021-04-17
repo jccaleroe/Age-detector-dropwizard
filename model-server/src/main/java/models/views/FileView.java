@@ -1,4 +1,4 @@
-package co.mil.imi.models.views;
+package models.views;
 
 import io.dropwizard.views.View;
 

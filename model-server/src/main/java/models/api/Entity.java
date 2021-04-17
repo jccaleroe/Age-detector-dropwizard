@@ -1,4 +1,4 @@
-package co.mil.imi.models.api;
+package models.api;
 
 public class Entity {
 

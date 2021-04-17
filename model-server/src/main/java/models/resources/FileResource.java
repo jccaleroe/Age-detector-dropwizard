@@ -1,12 +1,12 @@
-package co.mil.imi.models.resources;
+package models.resources;
 
-import co.mil.imi.models.core.ModelServer;
-import co.mil.imi.models.views.ImageView;
+import models.core.ModelServer;
+import models.views.ImageView;
 import org.glassfish.jersey.media.multipart.FormDataContentDisposition;
 import org.glassfish.jersey.media.multipart.FormDataParam;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import co.mil.imi.models.pool.AgeServerConnectionPool;
+import models.pool.AgeServerConnectionPool;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.POST;

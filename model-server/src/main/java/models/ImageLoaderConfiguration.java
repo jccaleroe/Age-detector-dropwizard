@@ -1,4 +1,4 @@
-package co.mil.imi.models;
+package models;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.dropwizard.Configuration;

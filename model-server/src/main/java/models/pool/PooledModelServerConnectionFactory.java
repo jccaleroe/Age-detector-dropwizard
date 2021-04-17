@@ -1,6 +1,6 @@
-package co.mil.imi.models.pool;
+package models.pool;
 
-import co.mil.imi.models.core.ModelServer;
+import models.core.ModelServer;
 import org.apache.commons.pool2.BasePooledObjectFactory;
 import org.apache.commons.pool2.PooledObject;
 import org.apache.commons.pool2.impl.DefaultPooledObject;

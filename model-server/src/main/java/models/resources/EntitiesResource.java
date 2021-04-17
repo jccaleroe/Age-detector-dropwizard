@@ -1,10 +1,10 @@
-package co.mil.imi.models.resources;
+package models.resources;
 
-import co.mil.imi.models.api.Entity;
-import co.mil.imi.models.core.ModelServer;
-import co.mil.imi.models.views.EntitiesView;
-import co.mil.imi.models.views.UploadView;
-import co.mil.imi.models.pool.EntityServerConnectionPool;
+import models.api.Entity;
+import models.core.ModelServer;
+import models.views.EntitiesView;
+import models.views.UploadView;
+import models.pool.EntityServerConnectionPool;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;

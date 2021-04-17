@@ -1,10 +1,10 @@
-package co.mil.imi.models;
+package models;
 
-import co.mil.imi.models.flowable.HydraUpload;
-import co.mil.imi.models.resources.ClientResource;
-import co.mil.imi.models.resources.EntitiesResource;
-import co.mil.imi.models.resources.FileResource;
-import co.mil.imi.models.resources.UploadResource;
+import models.flowable.HydraUpload;
+import models.resources.ClientResource;
+import models.resources.EntitiesResource;
+import models.resources.FileResource;
+import models.resources.UploadResource;
 import io.dropwizard.Application;
 import io.dropwizard.bundles.assets.ConfiguredAssetsBundle;
 import io.dropwizard.setup.Bootstrap;

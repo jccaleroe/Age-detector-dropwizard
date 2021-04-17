@@ -1,6 +1,6 @@
-package co.mil.imi.models.resources;
+package models.resources;
 
-import co.mil.imi.models.flowable.HydraUpload;
+import models.flowable.HydraUpload;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.flowable.engine.TaskService;
 import org.flowable.task.api.Task;
